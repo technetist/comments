@@ -2,10 +2,10 @@
 $server = "localhost";
 $user = "root";
 $password = "";
+$db = "app_test";
 
-$conn = mysqli_connect($server, $user, $password);
+$connection = mysqli_connect($server, $user, $password, $db);
 
-if (!$conn) {
+if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
