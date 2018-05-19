@@ -3,3 +3,8 @@
     color: red;
     margin-left: 3px
 }
+
+.placeholder img{
+    width: 80%;
+    margin: 0 10%;
+}

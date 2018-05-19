@@ -15,14 +15,14 @@ include 'includes/header.php';
                     <input type="text"
                            class="form-control"
                            name="username"
-                           placeholder="username">
+                           placeholder="username" required>
                 </div>
                 <div class="form-group">
                     <label for="password" class="required-field">Password</label>
                     <input type="password"
                            class="form-control"
                            name="password"
-                           placeholder="password">
+                           placeholder="password" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>

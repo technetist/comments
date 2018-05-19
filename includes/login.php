@@ -8,7 +8,7 @@ if (isset($_POST['login'])) {
     $password=$_POST['password'];
     $sanitized_username = escape($username);
     $sanitized_password = escape($password);
-    $query = "SELECT * FROM users WHERE username = '{$sanitized_username}'";
+    $query = "SELECT * FROM users WHERE username = '{$sanitized_username}' OR email = '{$sanitized_username}'";
 
     $select_user_query = mysqli_query($connection, $query);
     if (!$select_user_query) {
@@ -17,6 +17,7 @@ if (isset($_POST['login'])) {
     while ($row = mysqli_fetch_array($select_user_query)) {
         $db_user_id = escape($row['id']);
         $db_username = escape($row['username']);
+        $db_email = escape($row['email']);
         $db_user_password = escape($row['password']);
     }
     if (isset($db_user_password) && password_verify($sanitized_password, $db_user_password)) {
@@ -25,6 +26,12 @@ if (isset($_POST['login'])) {
         session_write_close();
         header("Location: ../index.php");
         exit();
+    } elseif (isset($db_user_password) && !password_verify($sanitized_password, $db_user_password)) {
+        $_SESSION['message'] = "<h4 class='text-center bg-warning'>Credentials are wrong</h4>";
+        header("Location: ../index.php");
+    } elseif (!mysqli_num_rows($row)) {
+        $_SESSION['message'] = "<h4 class='text-center bg-warning'>Username doesn't exist</h4>";
+        header("Location: ../index.php");
     }
     else {
         $_SESSION['message'] = "<h4 class='text-center bg-warning'>Login Failed</h4>";
