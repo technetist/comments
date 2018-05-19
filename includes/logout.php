@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+session_start();
 include "db.php";
 
 if(isset($_POST['logout'])) {
@@ -10,4 +11,3 @@ if(isset($_POST['logout'])) {
     session_destroy();
     header("Location: ../index.php");
 }
-?>

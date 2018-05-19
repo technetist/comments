@@ -79,4 +79,3 @@ function html_cut($text, $max_length)
         $result .= "</".array_pop($tags).">";
     return $result;
 }
-?>
