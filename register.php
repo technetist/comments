@@ -32,10 +32,6 @@ include 'includes/header.php';
                            name="email"
                            aria-describedby="emailInfo"
                            placeholder="john@example.com">
-                    <small id="emailInfo"
-                           class="form-text text-muted">
-                        We'll only use your email to send you notifications and reset your password.
-                    </small>
                 </div>
                 <button type="submit"
                         class="btn btn-primary"

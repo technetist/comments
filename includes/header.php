@@ -62,11 +62,6 @@ include "functions.php";
                         <div class="form-group text-center">
                             <small><a href="register.php">New User?</a></small>
                         </div>
-                        <div class="form-group text-center">
-                            <small><a href="#"
-                                      data-toggle="modal"
-                                      data-target="#passwordModal">Forgot password?</a></small>
-                        </div>
                     </form>
                 </li>
             </ul>
