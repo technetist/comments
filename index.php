@@ -4,21 +4,21 @@ include 'includes/header.php';
 
 <?php if(isset($_SESSION['message'])){ echo "<div class='row'><div class='col-sm-12'>". $_SESSION['message'] ."</div></div>";
 unset($_SESSION['message']); } ?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 my-4">
-            <h1 class="text-center">Product Comments</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 my-4">
+                <h1 class="text-center">Product Comments</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm-12 placeholder">
-            <img src="http://placehold.it/700x250"
-                 srcset="http://placehold.it/1000x400 1000w"
-                 alt="Placeholder"
-            />
+        <div class="row">
+            <div class="col-sm-12 placeholder">
+                <img src="http://placehold.it/700x250"
+                     srcset="http://placehold.it/1000x400 1000w"
+                     alt="Placeholder"
+                />
+            </div>
         </div>
-    </div>
 
         <?php
             if(isset($_SESSION['username'])):
