@@ -95,7 +95,6 @@ unset($_SESSION['message']); } ?>
             </div>
         <? endif; ?>
     </div>
-</div>
 
 <?php
 include 'includes/footer.php';
