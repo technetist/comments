@@ -2,7 +2,7 @@
 include 'includes/header.php';
 ?>
 
-<?php if(isset($_SESSION['message'])){ echo "<div class='row'><div class='col-sm-12'>". $_SESSION['message'] ."</div></div>";
+<?php if(isset($_SESSION['message'])){ echo "<div class='container'></div><div class='row'><div class='col-sm-12'>". $_SESSION['message'] ."</div></div></div>";
 unset($_SESSION['message']); } ?>
     <div class="container">
         <div class="row">
@@ -69,7 +69,8 @@ unset($_SESSION['message']); } ?>
                         </div>
                     <?php endwhile; ?>
                     </div>
-                    <div class="row my-4">
+        <?php endif ?>
+        <div class="row my-4">
                         <div class="col-sm-12">
                             <form role="form" action="includes/comment.php" method="post" class="form">
                                 <div class="form-group">
@@ -86,8 +87,7 @@ unset($_SESSION['message']); } ?>
                             </form>
                         </div>
                     </div>
-        <?php endif;
-        else: ?>
+        <?php else: ?>
             <div class="row my-5">
                 <div class="col-sm-12">
                     <h3 class="text-center">Please log in to see comments</h3>
